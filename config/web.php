@@ -13,8 +13,8 @@ $config = [
     ],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            // @link https://phpsolved.com/phpmyadmin-blowfish-secret-generator/
+            'cookieValidationKey' => 'vwqRC-aqkssJiDsb:YoCAhyk.Ds,;nnE',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
