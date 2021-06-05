@@ -21,11 +21,11 @@
         "yiisoft/yii2-bootstrap4": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
 
-        "oomphinc/composer-installers-extender": "^2.0",
-        "dominus77/yii2-sweetalert2-widget": "~1.3",
-
         "r2am9d/yii2-rbac-rule": "*",
         "r2am9d/yii2-activity-log": "*",
+
+        "oomphinc/composer-installers-extender": "^2.0",
+        "dominus77/yii2-sweetalert2-widget": "~1.3",
 
         "2amigos/yii2-usuario": "1.5.0",
         "axelpal/yii2-attachments": "*",

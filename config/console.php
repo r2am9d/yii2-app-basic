@@ -9,8 +9,8 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
     'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@bower' => '@vendor/bower',
+        '@npm'   => '@vendor/npm',
         '@tests' => '@app/tests',
     ],
     'components' => [
