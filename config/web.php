@@ -41,7 +41,9 @@ $config = [
             ]
         ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            'class' => 'yii\caching\DbCache',
+            // 'db' => 'mydb',
+            // 'cacheTable' => 'cache',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
@@ -51,11 +53,17 @@ $config = [
             'errorAction' => 'site/error',
         ],
         'mailer' => [
+            // https://dev.to/bartosz/how-to-send-email-via-gmail-smtp-in-yii2-framework-24lk
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.gmail.com',
+                'username' => '',
+                'password' => '',
+                'port' => '587',
+                'encryption' => 'tls',
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
