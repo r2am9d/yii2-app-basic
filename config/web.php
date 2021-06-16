@@ -53,7 +53,7 @@ $config = [
             'errorAction' => 'site/error',
         ],
         'mailer' => [
-            // https://dev.to/bartosz/how-to-send-email-via-gmail-smtp-in-yii2-framework-24lk
+            // @link https://dev.to/bartosz/how-to-send-email-via-gmail-smtp-in-yii2-framework-24lk
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => false,
             'transport' => [
@@ -63,6 +63,19 @@ $config = [
                 'password' => '',
                 'port' => '587',
                 'encryption' => 'tls',
+            ],
+        ],
+        'formatter' => [
+            'class' => 'yii\i18n\formatter',
+            'thousandSeparator' => ',',
+            'decimalSeparator' => '.',
+            'currencyCode' => 'PHP',
+            'numberFormatterOptions' => [
+                NumberFormatter::MIN_FRACTION_DIGITS => 0,
+                NumberFormatter::MAX_FRACTION_DIGITS => 2,
+            ],
+            'numberFormatterSymbols' => [
+                NumberFormatter::CURRENCY_SYMBOL => 'Php ', // &#8369;
             ],
         ],
         'log' => [
